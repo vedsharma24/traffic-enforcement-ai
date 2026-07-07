@@ -1,0 +1,7 @@
+video_path: videos/raw/test.mp4
+
+confidence: 0.4
+
+save_output: true
+
+show_video: true
