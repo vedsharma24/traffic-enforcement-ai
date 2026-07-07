@@ -1,7 +1,107 @@
-video_path: videos/raw/test.mp4
+# ==========================================
+# Project Configuration
+# ==========================================
 
-confidence: 0.4
+project:
+  name: "Indian Intelligent Traffic Violation Detection System"
+  version: "0.1.0"
+  debug: true
 
-save_output: true
+# ==========================================
+# Video
+# ==========================================
 
-show_video: true
+video:
+  source: "videos/raw/test.mp4"
+  output_directory: "videos/processed"
+  save_output: true
+  display_output: true
+  resize:
+    enabled: false
+    width: 1920
+    height: 1080
+
+# ==========================================
+# Detection
+# ==========================================
+
+detection:
+  model: "yolo11n.pt"
+  confidence_threshold: 0.40
+  iou_threshold: 0.45
+  device: "auto"
+
+# ==========================================
+# Tracking
+# ==========================================
+
+tracking:
+  enabled: true
+  tracker: "bytetrack.yaml"
+  persist_tracks: true
+
+# ==========================================
+# Traffic Light
+# ==========================================
+
+traffic_light:
+  enabled: true
+  roi:
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+
+# ==========================================
+# Stop Line
+# ==========================================
+
+stop_line:
+  enabled: true
+  start:
+    x: 0
+    y: 0
+  end:
+    x: 0
+    y: 0
+
+# ==========================================
+# Helmet Detection
+# ==========================================
+
+helmet:
+  enabled: false
+  confidence_threshold: 0.50
+
+# ==========================================
+# Seatbelt Detection
+# ==========================================
+
+seatbelt:
+  enabled: false
+  confidence_threshold: 0.50
+
+# ==========================================
+# License Plate
+# ==========================================
+
+license_plate:
+  enabled: false
+  ocr: "paddleocr"
+
+# ==========================================
+# Output
+# ==========================================
+
+output:
+  images: "outputs/images"
+  clips: "outputs/clips"
+  logs: "outputs/logs"
+  reports: "outputs/reports"
+
+# ==========================================
+# Logging
+# ==========================================
+
+logging:
+  level: "INFO"

@@ -1,0 +1,20 @@
+vehicle_classes:
+  - car
+  - motorcycle
+  - bus
+  - truck
+  - bicycle
+  - auto_rickshaw
+
+traffic_light_classes:
+  - red
+  - yellow
+  - green
+
+violations:
+  - red_light
+  - no_helmet
+  - no_seatbelt
+  - stop_line
+  - wrong_way
+  - triple_riding

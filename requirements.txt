@@ -1,5 +1,0 @@
-opencv-python
-pyyaml
-ultralytics
-numpy
-pytest
